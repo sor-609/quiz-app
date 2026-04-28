@@ -11,6 +11,10 @@ button {
     margin-right: 5px;
 }
 
-button:focus {
-    outline: 1px;
+.correct {
+    outline: 2px solid #4caf50;
+}
+
+.wrong {
+    outline: 2px solid #f11
 }

@@ -27,11 +27,25 @@ quizzes.forEach((q, index) => {
         btn.textContent = choice;
 
         btn.onclick = () => {
-            if (choice === q.correct) {
-                btn.style.backgroundColor = "lightgreen";
-            } else {
-                btn.style.backgroundColor = "salmon";
-            }
+            const buttons = div.querySelectorAll("button");
+
+            buttons.forEach(b => {
+                b.disabled = true; // 他のボタンを押せなくする
+
+                // 押したボタンを緑or赤にする
+                if (b === btn) {
+                    if (choice === q.correct) {
+                        b.classList.add("correct");
+                    } else {
+                        b.classList.add("wrong");
+                    }
+                }
+
+                // 正解のボタンを緑にする
+                if (b.textContent === q.correct) {
+                    b.classList.add("correct");
+                }
+            });
         };
 
         div.appendChild(btn);
