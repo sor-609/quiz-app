@@ -36,7 +36,8 @@ button:hover:not(:disabled) {
 }
 
 .explanation {
-    width: 300px;
+    display: none;
+    width: 450px;
     margin: 15px auto;
     padding: 10px;
     border-radius: 5px;
@@ -44,8 +45,13 @@ button:hover:not(:disabled) {
     border-left: 5px solid #fcc67f;
 }
 
+.explanation.show {
+    display: block;
+}
+
 #next-btn {
     margin: auto;
+    transition: 0.3s;
 }
 
 .result-box {

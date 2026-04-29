@@ -68,6 +68,7 @@ function showQuiz() {
             });
 
             explanation.textContent = q.explanation;
+            explanation.classList.add("show");
 
             nextBtn.style.display = "block";
         };
