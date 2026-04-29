@@ -36,6 +36,7 @@ button:hover:not(:disabled) {
 }
 
 .explanation {
+    width: 300px;
     margin: 15px 0;
     padding: 10px;
     border-radius: 5px;
