@@ -19,6 +19,9 @@ const quizzes = [
 
 const container = document.getElementById("quiz-list");
 
+let score = 0;
+let total = quizzes.length; // 問題数
+
 quizzes.forEach((q, index) => {
     const div = document.createElement("div");
 
