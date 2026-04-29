@@ -39,7 +39,7 @@ button:hover:not(:disabled) {
     text-align: left;
     display: none;
     width: 450px;
-    margin: 15px auto;
+    margin: 15px;
     padding: 10px;
     border-radius: 5px;
     background-color: antiquewhite;
@@ -57,7 +57,7 @@ button:hover:not(:disabled) {
 
 .result-box {
     text-align: center;
-    margin: 50px auto;
+    margin: 50px;
     padding: 30px;
     width: 90%;
     border-radius: 15px;
