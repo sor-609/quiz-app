@@ -5,7 +5,7 @@ body {
 }
 
 button {
-    border: 1px solid #222;
+    border: 1px solid #555;
     border-radius: 10px;
     font-size: 16px;
     padding: 5px;
@@ -38,6 +38,7 @@ button:hover:not(:disabled) {
 }
 
 .explanation {
+    justify-content: center;
     text-align: left;
     display: none;
     max-width: 450px;
