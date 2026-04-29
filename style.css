@@ -38,7 +38,7 @@ button:hover:not(:disabled) {
 .explanation {
     text-align: left;
     display: none;
-    width: 450px;
+    max-width: 450px;
     margin: 15px;
     padding: 10px;
     border-radius: 5px;
@@ -59,7 +59,7 @@ button:hover:not(:disabled) {
     text-align: center;
     margin: 50px;
     padding: 30px;
-    width: 90%;
+    max-width: 90%;
     border-radius: 15px;
     background-color: #f5f5f5;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
