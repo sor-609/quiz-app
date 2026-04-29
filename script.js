@@ -6,7 +6,7 @@ const quizzes = [
         correct: "富士山"
     },
     {
-        question: "では、富士山がまたがっている都道府県はどことどこ？",
+        question: "富士山がまたがっている都道府県はどことどこ？",
         choices: ["静岡県と愛知県", "山梨県と静岡県", "長野県と山梨県", "長野県と静岡県"],
         correct: "山梨県と静岡県"
     },
@@ -84,6 +84,23 @@ nextBtn.onclick = () => {
 
 // 結果表示
 function showResult() {
-    container.innerHTML = `<h2>結果<br><b>${score} / ${quizzes.length}</b></h2>`;
     nextBtn.style.display = "none";
+
+    container.innerHTML = `
+        <div class="result-box">
+            <h2>結果</h2>
+            <p class="score">${score} / ${quizzes.length}</p>
+            <p class="message">${getMessage()}</p>
+            <button onclick="location.reload()">もう一回</button>
+        </div>
+    `;
+}
+
+// 結果メッセージ
+function getMessage() {
+    if (score === quizzes.length) return "満点！　評価：エベレスト級"
+    if (score === quizzes.length - 1) return "もう一息！　評価：Ｋ２級"
+    if (score >= quizzes.length / 2) return "いい感じ！　評価：富士山級"
+    if (score >= quizzes.length + 1) return "ギリＯＫ！　評価：ウィチプルーフ山級"
+    return "残念！もう一度挑戦しよう！　評価：マリアナ海溝級"
 }
