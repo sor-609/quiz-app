@@ -33,9 +33,9 @@ button:hover:not(:disabled) {
 .wrong {
     opacity: 1;
     border: 2px solid #f11;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: salmon;
-    color: #510d0d
+    color: #510d0d;
 }
 
 .explanation {
@@ -44,7 +44,7 @@ button:hover:not(:disabled) {
     display: none;
     white-space: pre-wrap;
     max-width: 450px;
-    margin: 0 auto;
+    margin: 15px auto;
     padding: 10px;
     border-radius: 5px;
     background-color: antiquewhite;
