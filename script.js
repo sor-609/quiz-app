@@ -33,6 +33,7 @@ showQuiz();
 function showQuiz() {
     container.innerHTML = "";
     nextBtn.style.display = "none";
+    explanation.style.display = "none";
 
     const q = quizzes[currentIndex];
 
