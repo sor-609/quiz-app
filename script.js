@@ -18,17 +18,24 @@ const quizzes = [
 ];
 
 const container = document.getElementById("quiz-list");
+const nextBtn = document.getElementById("next-btn");
 
+let currentIndex = 0;
 let score = 0;
-let total = quizzes.length; // 問題数
 
-quizzes.forEach((q, index) => {
-    const div = document.createElement("div");
+showQuiz();
+
+// 1問分の処理
+function showQuiz() {
+    container.innerHTML = "";
+    nextBtn.style.display = "none";
+
+    const q = quizzes[currentIndex];
 
     // 問題文
     const p = document.createElement("p");
-    p.textContent = `Q${index + 1}: ${q.question}`;
-    div.appendChild(p);
+    p.textContent = `Q${currentIndex + 1}: ${q.question}`;
+    container.appendChild(p);
 
     // 選択肢ボタン
     q.choices.forEach(choice => {
@@ -36,7 +43,7 @@ quizzes.forEach((q, index) => {
         btn.textContent = choice;
 
         btn.onclick = () => {
-            const buttons = div.querySelectorAll("button");
+            const buttons = container.querySelectorAll("button");
 
             buttons.forEach(b => {
                 b.disabled = true; // 他のボタンを押せなくする
@@ -45,6 +52,7 @@ quizzes.forEach((q, index) => {
                 if (b === btn) {
                     if (choice === q.correct) {
                         b.classList.add("correct");
+                        score++; // 正解数カウント+1
                     } else {
                         b.classList.add("wrong");
                     }
@@ -55,10 +63,27 @@ quizzes.forEach((q, index) => {
                     b.classList.add("correct");
                 }
             });
+
+            nextBtn.style.display = "block";
         };
 
-        div.appendChild(btn);
+        container.appendChild(btn);
     });
+}
 
-    container.appendChild(div);
-});
+// 「次へ」ボタン
+nextBtn.onclick = () => {
+    currentIndex++;
+
+    if (currentIndex < quizzes.length) {
+        showQuiz();
+    } else {
+        showResult();
+    }
+};
+
+// 結果表示
+function showResult() {
+    container.innerHTML = `<h2>結果<br><b>${score} / ${quizzes.length}</b></h2>`;
+    nextBtn.style.display = "none";
+}
