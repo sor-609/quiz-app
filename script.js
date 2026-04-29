@@ -21,7 +21,6 @@ const quizzes = [
 ];
 
 const container = document.getElementById("quiz-list");
-const explanation = document.createElement("p");
 const nextBtn = document.getElementById("next-btn");
 
 let currentIndex = 0;
@@ -33,7 +32,6 @@ showQuiz();
 function showQuiz() {
     container.innerHTML = "";
     nextBtn.style.display = "none";
-    explanation.style.display = "none";
 
     const q = quizzes[currentIndex];
 
@@ -69,15 +67,17 @@ function showQuiz() {
                 }
             });
 
-            explanation.textContent = q.explanation; // 解説
-            nextBtn.style.display = "block"; // 「次へ」ボタン表示準備
+            explanation.textContent = q.explanation;
+
+            nextBtn.style.display = "block";
         };
 
         container.appendChild(btn);
     });
-    
-        explanation.classList.add("explanation");
-        container.appendChild(explanation);
+
+    const explanation = document.createElement("p");
+    explanation.classList.add("explanation");
+    container.appendChild(explanation);
 }
 
 // 「次へ」ボタン
