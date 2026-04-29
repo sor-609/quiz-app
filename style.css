@@ -1,9 +1,11 @@
 body {
     text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
 }
 
 button {
-    font-size: 15px;
+    font-size: 16px;
     padding: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -21,7 +23,7 @@ button:hover:not(:disabled) {
     border: 2px solid #4caf50;
     border-radius: 5px;
     background-color: lightgreen;
-    color: #123514;
+    color: #174719;
     transform: scale(1.05);
 }
 
@@ -41,7 +43,7 @@ button:hover:not(:disabled) {
     text-align: center;
     margin: 50px auto;
     padding: 30px;
-    width: 300px;
+    width: 90%;
     border-radius: 15px;
     background-color: #f5f5f5;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
