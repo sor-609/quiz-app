@@ -3,17 +3,20 @@ const quizzes = [
     {
         question: "日本で一番高い山は何？",
         choices: ["エベレスト", "北岳", "阿蘇山", "富士山"],
-        correct: "富士山"
+        correct: "富士山",
+        explanation: "エベレスト：世界一高い山。"
     },
     {
         question: "富士山がまたがっている都道府県はどことどこ？",
         choices: ["静岡県と愛知県", "山梨県と静岡県", "長野県と山梨県", "長野県と静岡県"],
-        correct: "山梨県と静岡県"
+        correct: "山梨県と静岡県",
+        explanation: ""
     },
     {
         question: "標高約8850mのエベレスト。主にネパールでは何と呼ばれている？",
         choices: ["サガルマータ","チョモランマ","エヴレステ"],
-        correct: "サガルマータ"
+        correct: "サガルマータ",
+        explanation: ""
     }
 ];
 
@@ -64,8 +67,13 @@ function showQuiz() {
                 }
             });
 
-            nextBtn.style.display = "block";
+            explanation.textContent = q.explanation; // 解説
+            nextBtn.style.display = "block"; // 「次へ」ボタン表示準備
         };
+
+        const explanation = document.createElement("p");
+        explanation.classList.add("explanation");
+        container.appendChild(explanation);
 
         container.appendChild(btn);
     });
