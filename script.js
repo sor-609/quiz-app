@@ -21,6 +21,7 @@ const quizzes = [
 ];
 
 const container = document.getElementById("quiz-list");
+const explanation = document.createElement("p");
 const nextBtn = document.getElementById("next-btn");
 
 let currentIndex = 0;
@@ -74,7 +75,6 @@ function showQuiz() {
         container.appendChild(btn);
     });
     
-        const explanation = document.createElement("p");
         explanation.classList.add("explanation");
         container.appendChild(explanation);
 }
