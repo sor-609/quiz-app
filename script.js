@@ -71,12 +71,12 @@ function showQuiz() {
             nextBtn.style.display = "block"; // 「次へ」ボタン表示準備
         };
 
+        container.appendChild(btn);
+    });
+    
         const explanation = document.createElement("p");
         explanation.classList.add("explanation");
         container.appendChild(explanation);
-
-        container.appendChild(btn);
-    });
 }
 
 // 「次へ」ボタン
