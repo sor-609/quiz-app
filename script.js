@@ -1,32 +1,14 @@
-// 上から問題文、選択肢、答え。 追加する際は同じフォーマットで下に書く。
-const quizzes = [
-    {
-        question: "日本で一番高い山は何？",
-        choices: ["エベレスト", "北岳", "阿蘇山", "富士山"],
-        correct: "富士山",
-        explanation: "エベレスト：世界一高い山。\n北岳：山梨県にある日本で2番目に高い山。\n阿蘇山：熊本県にある世界最大級のカルデラを持つ活火山。\n富士山：日本で一番高い山。なのでこれが正解。"
-    },
-    {
-        question: "富士山がまたがっている都道府県はどことどこ？",
-        choices: ["静岡県と愛知県", "山梨県と静岡県", "長野県と山梨県", "長野県と静岡県"],
-        correct: "山梨県と静岡県",
-        explanation: ""
-    },
-    {
-        question: "標高約8850mのエベレスト。主にネパールでは何と呼ばれている？",
-        choices: ["サガルマータ","チョモランマ","エヴレステ"],
-        correct: "サガルマータ",
-        explanation: ""
-    }
-];
-
 const container = document.getElementById("quiz-list");
 const nextBtn = document.getElementById("next-btn");
 
 let currentIndex = 0;
 let score = 0;
 
-showQuiz();
+const params = new URLSearchParams(window.location.search);
+const quizId = params.get("id");
+
+const quiz = quizzes[quizId]
+showQuiz(quiz);
 
 // 1問分の処理
 function showQuiz() {
