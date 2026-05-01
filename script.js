@@ -8,9 +8,13 @@ const params = new URLSearchParams(window.location.search);
 const quizId = params.get("id");
 
 const quiz = quizzes[quizId]
-showQuiz(quiz);
+const quizData = quiz.questions
+// quizId:URLの最後のid（クイズid） quiz:そのクイズの情報すべて quizData:そのクイズの問題情報すべて
+
+showQuiz(quizData);
 
 // 1問分の処理
+// q:何問目か p:q問目の問題文（Q：～）
 function showQuiz() {
     container.innerHTML = "";
     nextBtn.style.display = "none";
