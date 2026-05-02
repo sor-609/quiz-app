@@ -7,19 +7,21 @@ let score = 0;
 const params = new URLSearchParams(window.location.search);
 const quizId = params.get("id");
 
+import {quizzes} from "./quizData.js"
 const quiz = quizzes[quizId]
-const quizData = quiz.questions
-// quizId:URLの最後のid（クイズid） quiz:そのクイズの情報すべて quizData:そのクイズの問題情報すべて
+const titleData = quiz.title
+const questionsData = quiz.questions
+// quizId:URLの最後のid（クイズid） quiz:そのクイズの情報すべて titleData:そのクイズのタイトル quizData:そのクイズの問題情報すべて
 
-showQuiz(quizData);
+showQuiz();
 
 // 1問分の処理
-// q:何問目か p:q問目の問題文（Q：～）
+// currentIndex:何問目（-1された値） q:（currentIndex）問目の問題情報 p:問題文（Q：～）
 function showQuiz() {
     container.innerHTML = "";
     nextBtn.style.display = "none";
 
-    const q = quizzes[currentIndex];
+    const q = quizzes.questions[currentIndex];
 
     // 問題文
     const p = document.createElement("p");

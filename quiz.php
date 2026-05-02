@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>高い山クイズ</title>
+        <meta charset="UTF-8" 
+        name="viewport" content="width=device-width, initial-scale=1.0" 
+        name="description" content="クイズができるサイト！"
+        name="keywords" content="クイズ,学習,勉強">
+        <title>Quisol｜クイズサイト｜<?php echo $titleData; ?></title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>

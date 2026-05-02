@@ -1,9 +1,9 @@
 // 上から、クイズID、タイトル、問題情報（問題文、選択肢、答え、解説）。 追加する際は同じフォーマットで下に書く。
 const quizzes = {
-    1: {
+    1: { // quiz
         title: "高い山クイズ",
-        questions: [
-            {
+        questions: [ //questionsData
+            { // q
                 question: "日本で一番高い山は何？",
                 choices: ["エベレスト", "北岳", "阿蘇山", "富士山"],
                 correct: "富士山", // 数字で管理したい
