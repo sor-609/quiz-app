@@ -5,7 +5,7 @@
         name="viewport" content="width=device-width, initial-scale=1.0" 
         name="description" content="クイズができるサイト！"
         name="keywords" content="クイズ,学習,勉強">
-        <title>Quisol｜クイズサイト｜<?php echo $titleData; ?></title>
+        <title>Quisor❘クイズサイト❘</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
