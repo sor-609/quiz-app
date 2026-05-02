@@ -11,6 +11,8 @@ import {quizzes} from "./quizData.js"
 const quiz = quizzes[quizId]
 const titleData = quiz.title
 const questionsData = quiz.questions
+
+container.appendChild(titleData);
 // quizId:URLの最後のid（クイズid） quiz:そのクイズの情報すべて titleData:そのクイズのタイトル quizData:そのクイズの問題情報すべて
 
 showQuiz();
