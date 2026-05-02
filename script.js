@@ -7,7 +7,7 @@ let score = 0;
 const params = new URLSearchParams(window.location.search);
 const quizId = params.get("id");
 
-const quiz = questionsData[quizId];
+const quiz = quizzes[quizId];
 const titleData = quiz.title;
 const questionsData = quiz.questions;
 // quizId:URLの最後のid（クイズid） quiz:そのクイズの情報すべて titleData:そのクイズのタイトル questionsData:そのクイズの問題情報すべて
