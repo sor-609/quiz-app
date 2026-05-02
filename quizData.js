@@ -1,5 +1,5 @@
 // 上から、クイズID、タイトル、問題情報（問題文、選択肢、答え、解説）。 追加する際は同じフォーマットで下に書く。
-export const quizzes = [
+const quizzes = [
     { // quiz
         title: "高い山クイズ",
         questions: [ //questionsData
