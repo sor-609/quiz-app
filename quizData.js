@@ -25,4 +25,4 @@ const quizzes = [
     }
 ];
 
-const quizTitle = document.getElementById("quiz-title");
+export { quizzes };

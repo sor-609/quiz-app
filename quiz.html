@@ -11,7 +11,8 @@
     <body>
         <script type="module">
             import { quizzes } from './quizData.js';
-            document.title = "Quisori ❘ クイズサイト ❘ " + quizzes[0].title;
+            import { quizId } from './script.js';
+            document.title = "Quisori ❘ クイズサイト ❘ " + quizzes[quizId].title;
         </script>
         <h1 id="quiz-title"></h1>
 
