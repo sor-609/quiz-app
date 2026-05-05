@@ -101,6 +101,7 @@ function showResult() {
             <p class="score">${score} / ${questionsData.length}</p>
             <p class="message">${getMessage()}</p>
             <button onclick="location.reload()">もう一回</button>
+            <button onclick="window.location.href='index.html'">クイズ一覧に戻る</button>
         </div>
     `;
 }
