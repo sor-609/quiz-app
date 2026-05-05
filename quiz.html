@@ -9,18 +9,12 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <script type="module" src="quizData.js" src="script.js">
-            import { quizzes } from './quizData.js';
-            import { quizId } from './script.js';
-            document.title = "Quisori ❘ クイズサイト ❘ " + quizzes[quizId].title;
-        </script>
         <h1 id="quiz-title"></h1>
 
         <div id="quiz-list"></div>
 
         <button id="next-btn" style="display:none;">次へ</button>
- 
-        <script src="quizData.js"></script>
-        <script src="script.js"></script>
+        
+        <script type="module" src="script.js"></script>
     </body>
 </html>

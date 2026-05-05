@@ -1,6 +1,6 @@
 import { quizzes } from './quizData.js';
 
-const titleData = document.getElementById("quiz-title");
+const quizTitleElement = document.getElementById("quiz-title");
 const quizListContainer = document.getElementById("quiz-list");
 const nextBtn = document.getElementById("next-btn");
 
@@ -8,12 +8,13 @@ let currentQuestion = 0;
 let score = 0;
 
 const params = new URLSearchParams(window.location.search);
-const quizId = params.get("id");
-export { quizId };
+const quizId = Number(params.get("id"));
 
 const quiz = quizzes[quizId];
-const titleData = quiz.title;
 const questionsData = quiz.questions;
+
+quizTitleElement.textContent = quiz.title;
+document.title = `Quisori ❘ クイズサイト ❘ ${quiz.title}`;
 // quizId:URLの最後のid（クイズid） quiz:そのクイズの情報すべて titleData:そのクイズのタイトル questionsData:そのクイズの問題情報すべて
 
 
