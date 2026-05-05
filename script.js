@@ -36,10 +36,48 @@ function showQuiz() {
     if (q.type === "select") {
         formSelect();
     }
-    
+
     const explanation = document.createElement("p");
     explanation.classList.add("explanation");
     quizDisplayElement.appendChild(explanation);
+
+    // 「select」方式
+    function formSelect() {
+        q.choices.forEach(choice => {
+            const btn = document.createElement("button");
+            btn.textContent = choice;
+
+            btn.onclick = () => {
+                const buttons = quizDisplayElement.querySelectorAll("button");
+
+                buttons.forEach(b => {
+                    b.disabled = true; // 他のボタンを押せなくする
+
+                    // 押したボタンを緑or赤にする
+                    if (b === btn) {
+                        if (choice === q.choices[q.correct]) {
+                            b.classList.add("correct");
+                            score++; // 正解数カウント+1
+                        } else {
+                            b.classList.add("wrong");
+                        }
+                    }
+
+                    // 正解のボタンを緑にする
+                    if (b.textContent === q.choices[q.correct]) {
+                        b.classList.add("correct");
+                    }
+                })
+
+                explanation.textContent = q.explanation;
+                explanation.classList.add("show");
+
+                nextBtn.style.display = "block";
+            }
+
+            quizDisplayElement.appendChild(btn);
+        })
+    }
 }
 
 // 「次へ」ボタン
