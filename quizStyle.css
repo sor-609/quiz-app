@@ -76,6 +76,10 @@ button:hover:not(:disabled) {
     margin-bottom: 20px;
 }
 
+.result-box br {
+    margin-bottom: 20px;
+}
+
 .result-box button {
     padding: 10px 20px;
     font-size: 1rem;
