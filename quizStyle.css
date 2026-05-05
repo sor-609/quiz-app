@@ -1,13 +1,13 @@
 body {
     text-align: center;
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 100%;
 }
 
 button {
     border: 1px solid #555;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 1rem;
     color: #000;
     padding: 5px;
     padding-top: 5px;
@@ -43,12 +43,14 @@ button:hover:not(:disabled) {
     text-align: left;
     display: none;
     white-space: pre-wrap;
-    max-width: 450px;
+    max-width: 550px;
     margin: 15px auto;
     padding: 10px;
     border-radius: 5px;
     background-color: antiquewhite;
     border-left: 5px solid #fcc67f;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .explanation.show {
@@ -76,7 +78,7 @@ button:hover:not(:disabled) {
 
 .result-box button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .score {
@@ -87,5 +89,5 @@ button:hover:not(:disabled) {
 
 .message {
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 1.25rem;
 }

@@ -1,7 +1,7 @@
 import { quizzes } from './quizData.js';
 
 const quizTitleElement = document.getElementById("quiz-title");
-const quizListContainer = document.getElementById("quiz-list");
+const quizDisplayElement = document.getElementById("quiz-display");
 const nextBtn = document.getElementById("next-btn");
 
 let currentQuestion = 0;
@@ -24,7 +24,7 @@ showQuiz();
 // 1問分の処理
 // currentQuestion:何問目（-1された値） q:（currentQuestion）問目の問題情報 p:問題文（Q：～）
 function showQuiz() {
-    quizListContainer.innerHTML = "";
+    quizDisplayElement.innerHTML = "";
     nextBtn.style.display = "none";
 
     const q = questionsData[currentQuestion];
@@ -32,7 +32,7 @@ function showQuiz() {
     // 問題文
     const p = document.createElement("p");
     p.textContent = `Q${currentQuestion + 1}: ${q.question}`;
-    quizListContainer.appendChild(p);
+    quizDisplayElement.appendChild(p);
 
     // 選択肢ボタン
     q.choices.forEach(choice => {
@@ -40,7 +40,7 @@ function showQuiz() {
         btn.textContent = choice;
 
         btn.onclick = () => {
-            const buttons = quizListContainer.querySelectorAll("button");
+            const buttons = quizDisplayElement.querySelectorAll("button");
 
             buttons.forEach(b => {
                 b.disabled = true; // 他のボタンを押せなくする
@@ -67,12 +67,12 @@ function showQuiz() {
             nextBtn.style.display = "block";
         }
 
-        quizListContainer.appendChild(btn);
+        quizDisplayElement.appendChild(btn);
     })
 
     const explanation = document.createElement("p");
     explanation.classList.add("explanation");
-    quizListContainer.appendChild(explanation);
+    quizDisplayElement.appendChild(explanation);
 }
 
 // 「次へ」ボタン
@@ -90,7 +90,7 @@ nextBtn.onclick = () => {
 function showResult() {
     nextBtn.style.display = "none";
 
-    quizListContainer.innerHTML = `
+    quizDisplayElement.innerHTML = `
         <div class="result-box">
             <h2>結果</h2>
             <p class="score">${score} / ${questionsData.length}</p>
