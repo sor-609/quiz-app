@@ -19,11 +19,15 @@ button {
 }
 
 button:active {
-    background-color: #999;
+    background-color: #aaa;
 }
 
 button:hover:not(:disabled) {
     box-shadow: 0 0 2px #333;
+}
+
+button:disabled {
+    background-color: #777;
 }
 
 .correct {
