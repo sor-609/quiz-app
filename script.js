@@ -17,8 +17,6 @@ quizTitleElement.textContent = quiz.title;
 document.title = `Quisori ❘ クイズサイト ❘ ${quiz.title}`;
 // quizId:URLの最後のid（クイズid） quiz:そのクイズの情報すべて titleData:そのクイズのタイトル questionsData:そのクイズの問題情報すべて
 
-
-
 showQuiz();
 
 // 1問分の処理
@@ -35,6 +33,28 @@ function showQuiz() {
     quizDisplayElement.appendChild(p);
 
     // 選択肢ボタン
+    if (q.type === "select") {
+        formSelect();
+    }
+    
+    const explanation = document.createElement("p");
+    explanation.classList.add("explanation");
+    quizDisplayElement.appendChild(explanation);
+}
+
+// 「次へ」ボタン
+nextBtn.onclick = () => {
+    currentQuestion++;
+
+    if (currentQuestion < questionsData.length) {
+        showQuiz();
+    } else {
+        showResult();
+    }
+}
+
+// 「select」方式
+function formSelect() {
     q.choices.forEach(choice => {
         const btn = document.createElement("button");
         btn.textContent = choice;
@@ -69,21 +89,6 @@ function showQuiz() {
 
         quizDisplayElement.appendChild(btn);
     })
-
-    const explanation = document.createElement("p");
-    explanation.classList.add("explanation");
-    quizDisplayElement.appendChild(explanation);
-}
-
-// 「次へ」ボタン
-nextBtn.onclick = () => {
-    currentQuestion++;
-
-    if (currentQuestion < questionsData.length) {
-        showQuiz();
-    } else {
-        showResult();
-    }
 }
 
 // 結果表示
