@@ -47,7 +47,7 @@ function showQuiz() {
 
                 // 押したボタンを緑or赤にする
                 if (b === btn) {
-                    if (choice === q.choices[correct]) {
+                    if (choice === q.choices[q.correct]) {
                         b.classList.add("correct");
                         score++; // 正解数カウント+1
                     } else {
@@ -56,7 +56,7 @@ function showQuiz() {
                 }
 
                 // 正解のボタンを緑にする
-                if (b.textContent === q.choices[correct]) {
+                if (b.textContent === q.choices[q.correct]) {
                     b.classList.add("correct");
                 }
             })
