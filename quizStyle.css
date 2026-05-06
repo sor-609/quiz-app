@@ -27,7 +27,7 @@ button:hover:not(:disabled) {
 }
 
 button.unpressed:disabled {
-    background-color: #777;
+    background-color: #bbb;
 }
 
 .correct {
