@@ -5,8 +5,8 @@ body {
 }
 
 #quiz-list div {
-    border-width: 1 0 0 0;
-    border: auto solid #ccc;
+    border: solid #ccc;
+    border-width: 1px 0;
     padding: 10px;
     margin: 0 auto;
     width: 100%;
