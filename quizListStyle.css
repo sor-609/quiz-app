@@ -12,5 +12,6 @@ body {
     width: 100%;
     max-width: 1000px;
     cursor: pointer;
-    box-shadow: 0 0 2px #ccc
+    box-shadow: -2px 0 2px #ccc;
+    box-shadow: 2px 0 2px #ccc;
 }
