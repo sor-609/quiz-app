@@ -4,7 +4,7 @@ const quizzes = [
         id: 0,
         title: "高い山クイズ",
         genres: ["nonSchoolUnit","nonGenre","geography"],
-        description: "",
+        description: "日本・世界のいろいろな高い山についてです。",
         questions: [ //questionsData
             { // q
                 type: "select",
