@@ -9,12 +9,16 @@ body {
     border-width: 1px 0;
     padding: 10px;
     margin: 0 auto;
-    width: 100%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 600px;
     cursor: pointer;
-    background-color: #f8f8f8;
+    background-color: #fafafa;
 }
 
 #quiz-list div:hover {
+    background-color: #f8f8f8;
+}
+
+#quiz-list div:active {
     background-color: #f0f0f0;
 }
