@@ -1,4 +1,4 @@
-const genreNames = {
+const genreNameList = {
     nonGenre: "一般",
     geography: "地理"
 };
@@ -37,5 +37,5 @@ const quizzes = [
     }
 ];
 
-export { genreNames };
+export { genreNameList };
 export { quizzes };
