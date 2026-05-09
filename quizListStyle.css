@@ -20,6 +20,18 @@ body {
         "desc .";
 }
 
+#title {
+    grid-area: title;
+}
+
+#desc {
+    grid-area: desc;
+}
+
+#genre {
+    grid-area: genre;
+}
+
 #quiz-list div:hover {
     background-color: #f4f4f4;
 }
