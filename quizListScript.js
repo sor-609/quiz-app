@@ -12,9 +12,9 @@ quizzes.forEach(index => {
 
     quizItem.innerHTML = `
         <h2 class="title">${index.title}</h2>
+        <div class="genre-list">${genresHtml}</div>
         <p class="desc">${index.description}</p>
-        ${genresHtml}
-    `;
+        `;
 
     quizItem.onclick = () => {
         location.href = `quiz.html?id=${index.id}`;
