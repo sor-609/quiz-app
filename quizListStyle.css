@@ -10,6 +10,7 @@ body {
     grid-template-rows: auto 1fr;
 
     cursor: pointer;
+    box-sizing: border-box;
     border: solid #bbb;
     border-width: 1px 0;
     padding: 0 2rem;
