@@ -19,13 +19,14 @@ body {
     max-width: 600px;
     background-color: #fafafa;
     text-align: left;
-    line-height: 0.5;
+    line-height: 1;
 }
 
 .title {
     grid-column: 1;
     grid-row: 1;
-    color: red;
+    box-sizing: border-box;
+    border: 1px solid red;
 }
 
 .genre-list {
