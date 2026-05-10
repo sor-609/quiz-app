@@ -4,7 +4,7 @@ body {
     font-size: 100%;
 }
 
-#quiz-list div {
+#quiz-list div:not(.genre-list) {
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto 1fr;
