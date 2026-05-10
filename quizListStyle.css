@@ -19,7 +19,7 @@ body {
     max-width: 600px;
     background-color: #fafafa;
     text-align: left;
-    line-height: 1;
+    line-height: 0.5;
 }
 
 .title {
