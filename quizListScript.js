@@ -5,12 +5,11 @@ const quizList = document.getElementById("quiz-list");
 
 const params = new URLSearchParams(location.search);
 const displayGenre = String(params.get("genre"));
-console.log(displayGenre);
-const isNonGenre = displayGenre.includes("nonGenre");
-console.log(isNonGenre);
 
 quizzes.forEach(index => {
-    if (index) {
+    const indexGenre = index.genres;
+
+    if (displayGenre === null || indexGenre.includes(displayGenre)) {
         const quizItem = document.createElement("div");
 
         const genresHtml = index.genres
