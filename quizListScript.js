@@ -7,7 +7,7 @@ const params = new URLSearchParams(location.search);
 const displayGenre = params.get("genre");
 
 quizzes.forEach(index => {
-    if (index.includes(displayGenre)) {
+    if (index.includes(displayGenre) || displayGenre === null) {
         const quizItem = document.createElement("div");
 
         const genresHtml = index.genres
