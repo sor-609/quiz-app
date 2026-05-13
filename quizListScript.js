@@ -10,7 +10,7 @@ const isNonGenre = displayGenre.includes("nonGenre");
 console.log(isNonGenre);
 
 quizzes.forEach(index => {
-    if (index.includes(displayGenre) || displayGenre === null) {
+    if (index) {
         const quizItem = document.createElement("div");
 
         const genresHtml = index.genres
