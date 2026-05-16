@@ -1,6 +1,13 @@
 const genreNameList = {
     nonGenre: "一般",
-    geography: "地理"
+    japanese: "国語",
+    JHJapanese: "中学国語",
+    HJapanese: "高校国語",
+    geography: "地理",
+    history: "歴史",
+    math: "数学",
+    JHMath: "中学数学",
+    HMath: "高校数学"
 };
 
 // 上から、クイズID、タイトル、問題情報（問題文、選択肢、答え、解説）。 追加する際は同じフォーマットで下に書く。
@@ -11,7 +18,6 @@ const quizzes = [
         id: 0,
         title: "高い山クイズ",
         genres: ["nonGenre","geography"],
-        isSchoolUnit: false,
         description: "日本・世界のいろいろな高い山についてのクイズ。",
         questions: [ //questionsData
             { // q

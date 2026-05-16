@@ -1,7 +1,55 @@
 body {
+    margin:0;
     text-align: center;
     font-family: sans-serif;
     font-size: 100%;
+
+    padding-top: 3rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background-color: #4ee;
+    color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.5rem 2rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6rem;
+}
+
+nav a:hover {
+    color: #fa0;
+}
+
+.currentPage {
+    background-color: rgba(200,255,255,0.6);
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 3px solid #fff;
+    border-radius: 2px;
 }
 
 #quiz-list div:not(.genre-list) {
@@ -12,7 +60,7 @@ body {
     cursor: pointer;
     box-sizing: border-box;
     border: solid #bbb;
-    border-width: 1px 0;
+    border-width: 1px 0 0;
     padding: 0 2rem;
     margin: 0 auto;
     width: 90%;
@@ -25,7 +73,7 @@ body {
 .title {
     grid-column: 1;
     grid-row: 1;
-    margin-bottom: 0;
+    margin: 1rem 0;
 }
 
 .genre-list {
@@ -39,6 +87,7 @@ body {
 }
 
 .genre-list .genre {
+    cursor: default;
     text-decoration: underline;
     color: #333;
     font-size: 0.8rem;

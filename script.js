@@ -1,5 +1,5 @@
-import { genreNameList } from './quizData.js';
-import { quizzes } from './quizData.js';
+import { genreNameList } from './commonQuizData.js';
+import { quizzes } from './schoolUnitQuizData.js';
 
 const quizTitleElement = document.getElementById("quiz-title");
 const quizDisplayElement = document.getElementById("quiz-display");

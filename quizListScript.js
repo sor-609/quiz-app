@@ -1,15 +1,38 @@
-import { genreNameList } from './quizData.js';
-import { quizzes } from './quizData.js';
+const header = `
+<header>
+    <div class="logo">Quisori</div>
+
+    <nav>
+        <a href="index.html">ホーム</a>
+        <a href="#">クイズ記事</a>
+        <a href="#">お問い合わせ</a>
+    </nav>
+</header>
+`;
+document.getElementById("header").innerHTML = header;
+
+const links = document.querySelectorAll("nav a");
+
+links.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add("currentPage");
+    }
+});
+
+
+import { genreNameList } from './commonQuizData.js';
+import { quizzes } from './schoolUnitQuizData.js';
 
 const quizList = document.getElementById("quiz-list");
 
 const params = new URLSearchParams(location.search);
-const displayGenre = String(params.get("genre"));
+const displayGenre = params.get("genre");
 
 quizzes.forEach(index => {
     const indexGenre = index.genres;
+    console.log(indexGenre,displayGenre);
 
-    if (index.isSchoolUnit === true) {
+    if (displayGenre === null || indexGenre.includes(displayGenre)) {
         const quizItem = document.createElement("div");
 
         const genresHtml = index.genres
@@ -19,7 +42,7 @@ quizzes.forEach(index => {
         quizItem.innerHTML = `
             <h2 class="title">${index.title}</h2>
             <div class="genre-list">${genresHtml}</div>
-            <p class="desc">${index.description}</p>
+            <p class="desc" style="display:none;">${index.description}</p>
             `;
 
         quizItem.onclick = () => {
